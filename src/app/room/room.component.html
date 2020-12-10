@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>RoomNumber</th>
+        <th>SquareFootage</th>
+        <th>TypeOfRoom</th>
+        <th>PhoneAvailable</th>
+      </tr>
+      </thead>
+      <tbody>
+  <tr>
+
+    <td >
+      {{showroom.RoomNumber}}
+    </td>
+    <td>
+      {{showroom.SquareFootage}}
+    </td>
+    <td>
+      {{showroom.TypeOfRoom}}
+    </td>
+    <td>
+      {{showroom.PhoneAvailable}}
+    </td>
+    <td>
+
+        <button type="button" class="btn btn-primary" (click)="modifier(showroom.id)">Update</button>
+
+    </td>
+    <td>
+      <button type="button" class="btn btn-danger" (click)="Supprimer()">Delete</button>
+    </td>
+    <td>
+
+      <button type="button" class="btn btn-primary" (click)="GetTourists(showroom.id)">Tourists</button>
+
+    </td>
+  </tr>
+      </tbody>
+    </table>
+  </div>
+

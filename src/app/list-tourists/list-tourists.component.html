@@ -1,0 +1,59 @@
+<div class="panel panel-primary">
+  <div class="panel-heading" align="center">
+    <h2>Tourist List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Cin</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>E-mail</th>
+        <th>Phone Number</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let tourist of Room.Tourist ;let i = index">
+
+        <td *ngIf="test===false">
+          {{tourist.cin}}
+        </td>
+        <td *ngIf="test===false">
+          {{tourist.nom}}
+        </td>
+        <td *ngIf="test===false">
+          {{tourist.prenom}}
+        </td>
+        <td *ngIf="test===false">
+          {{tourist.Email}}
+        </td>
+        <td *ngIf="test===false">
+          {{tourist.tel}}
+        </td>
+        <td *ngIf="test===false">
+          <button type="button" class="btn btn-primary" (click)="modifier(tourist)">Update</button>
+
+        </td>
+        <td *ngIf="test===false" >
+          <button type="button" class="btn btn-danger" (click)="Supprimer(tourist)">Delete</button>
+        </td>
+
+        <td colspan="5" *ngIf="test===true && tourist === t2">
+          <app-modifier-tourist [showtourist]="tourist" (modifier)="update($event,tourist)" (cancel)="can()"></app-modifier-tourist>
+        </td>
+
+
+      </tr>
+      <div *ngIf="tab() <nbr">
+
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="ajout()">Add Toorist</button>
+
+      </div>
+      <button type="button" class="btn btn-outline-primary btn-lg" (click)="retour()">Go To Back</button>
+      </tbody>
+    </table>
+  </div>
+</div>
+

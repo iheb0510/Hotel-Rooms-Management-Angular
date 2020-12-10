@@ -1,0 +1,44 @@
+{
+  "Reservation": [],
+  "Room": [
+    {
+      "RoomNumber": 22,
+      "TypeOfRoom": "Double",
+      "SquareFootage": 2222,
+      "PhoneAvailable": 54424443,
+      "id": 1,
+      "Tourist": [
+        {
+          "cin": "02589634",
+          "nom": "aaa",
+          "prenom": "bbbb",
+          "Email": "laribi@gmail.com",
+          "tel": "54424443"
+        },
+        {
+          "cin": "02658965",
+          "nom": "iheb",
+          "prenom": "laribi",
+          "Email": "iheb@gmail.com",
+          "tel": "52986789"
+        }
+      ]
+    },
+    {
+      "RoomNumber": 655,
+      "TypeOfRoom": "Double",
+      "SquareFootage": 5522,
+      "PhoneAvailable": 54498969,
+      "Tourist": [],
+      "id": 3
+    },
+    {
+      "RoomNumber": 41,
+      "TypeOfRoom": "Single",
+      "SquareFootage": 5566,
+      "PhoneAvailable": 25659683,
+      "id": 4,
+      "Tourist": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<h1 align="center">Tourist Update </h1>
+<form #f="ngForm" (ngSubmit)="sum(f.value)">
+  <div class="form-group">
+    <label>Cin:</label>
+    <input type="text" name="cin" class="form-control" [(ngModel)]="showtourist.cin" pattern="[0-9]{8}$"
+           #k="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="k.touched && k.invalid">
+    cin is required
+  </div>
+  <div class="form-group">
+    <label>First Name:</label>
+    <input type="text" name="nom" class="form-control"[(ngModel)]="showtourist.nom"
+           required  #t="ngModel" >
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    Erreur first name
+  </div>
+  <div class="form-group">
+    <label>Last Name:</label>
+    <input type="text" name="prenom" class="form-control"  [(ngModel)]="showtourist.prenom"
+           #q="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+   Erreur last name
+  </div>
+
+  <div class="form-group">
+    <label>E-Mail:</label>
+    <input type="text" name="Email" class="form-control" [(ngModel)]="showtourist.Email" pattern="[A-Za-z0-9]+@+[A-Za-z]+.+[A-Za-z]{2,3}$"
+           #p="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+    Email is required
+  </div>
+  <div class="form-group">
+    <label>Phone Number</label>
+    <input type="text" name="tel" class="form-control" [(ngModel)]="showtourist.tel" pattern="[0-9]{8}$"
+           #r="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="r.touched && r.invalid">
+    Erreur phone number
+  </div>
+  <br/>
+  <div class="text-center">
+    <button class="btn btn-success btn-lg" [disabled]="f.invalid " >
+      Update Tourist
+    </button>
+    <button class="btn btn-primary btn-lg" (click)="can()"  >
+      Cancel
+    </button>
+  </div>
+</form>
+

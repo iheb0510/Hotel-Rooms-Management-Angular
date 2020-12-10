@@ -1,0 +1,48 @@
+<h1 align="center">Room Update </h1>
+<form #f="ngForm" (ngSubmit)="sum(f.value)">
+
+  <div class="form-group">
+    <label>Room Number:</label>
+    <input type="number" name="RoomNumber" class="form-control"[(ngModel)]="Room.RoomNumber"
+           required maxlength="4" #t="ngModel" pattern="[0-9]+$">
+  </div>
+  <div class="alert alert-danger" *ngIf="t.touched && t.invalid">
+    <div *ngIf="t.errors.required">Room Number is required</div>
+    <div *ngIf="t.errors.maxlength">Room Number maxlength is 4</div>
+    <div *ngIf="t.errors.pattern">message Pattern</div>
+  </div>
+  <div class="form-group">
+    <label>Type Of Room</label>
+    <input type="text" name="TypeOfRoom" class="form-control"  [(ngModel)]="Room.TypeOfRoom"
+           #q="ngModel" required >
+
+  </div>
+  <div class="alert alert-danger" *ngIf="q.touched && q.invalid">
+    Type Of Room is required
+  </div>
+  <div class="alert alert-danger" *ngIf="q.value<0 ">
+    quantity>0
+  </div>
+  <div class="form-group">
+    <label>Square Footage</label>
+    <input type="number" name="SquareFootage" class="form-control" [(ngModel)]="Room.SquareFootage"
+           #p="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+    Square Footage is required
+  </div>
+  <div class="form-group">
+    <label>Phone Available</label>
+    <input type="number" name="PhoneAvailable" class="form-control" [(ngModel)]="Room.PhoneAvailable"
+           #p="ngModel" required >
+  </div>
+  <div class="alert alert-danger" *ngIf="p.touched && p.invalid">
+    Phone Available
+  </div>
+  <br/>
+  <div class="text-center">
+  <button class="btn btn-success btn-lg" [disabled]="f.invalid ||q.value<0" >
+    Update Rooms
+  </button>
+  </div>
+</form>
