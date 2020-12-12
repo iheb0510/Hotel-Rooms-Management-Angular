@@ -1,8 +1,9 @@
+<div class="container">
 <h1 align="center">Add Room</h1>
 <form [formGroup]="RoomForm" >
   <div class="form-group">
     <label >Room Number</label>
-      <input type="number" class="form-control"  required formControlName="RoomNumber" >
+      <input type="text" class="form-control"  required formControlName="RoomNumber" >
       <div *ngIf="RoomNumber.invalid && RoomNumber.touched " class="alert alert-danger">
         Erreur Room number
       </div>
@@ -31,15 +32,18 @@
         <option>Single</option>
         <option>Double</option>
         <option>Triple</option>
-        <option>Suite</option>
       </select>
       <div  *ngIf="TypeOfRoom.touched && TypeOfRoom.invalid" class="alert alert-danger">
 
-          <div *ngIf="TypeOfRoom.invalid">erreur</div>
+          <div *ngIf="TypeOfRoom.invalid">erreur type of room</div>
       </div>
 
   </div>
   <div class="text-center">
    <button [disabled]="RoomForm.invalid"  class="btn btn-success btn-lg" type="submit" (click)="Ajouter()">Add Room</button>
+    <button class="btn btn-primary btn-lg" (click)="can()"  >
+      Cancel
+    </button>
     </div>
 </form>
+</div>

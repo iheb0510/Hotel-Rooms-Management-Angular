@@ -1,3 +1,4 @@
+<div class="container">
 <h1 align="center">Add Tourist </h1>
 <form #b="ngForm" (ngSubmit)="sum(b.value)">
   <div class="form-group">
@@ -6,7 +7,7 @@
            #v="ngModel" required >
   </div>
   <div class="alert alert-danger" *ngIf="v.touched && v.invalid">
-    cin is required
+    Erreur cin
   </div>
   <div class="form-group">
     <label>First Name:</label>
@@ -27,11 +28,11 @@
 
   <div class="form-group">
     <label>E-Mail:</label>
-    <input type="text" name="Email" class="form-control" [(ngModel)]="tourist.Email" pattern="[A-Za-z0-9]+@+[A-Za-z]+.+[A-Za-z]{2,3}$"
+    <input type="text" name="Email" class="form-control" [(ngModel)]="tourist.Email" pattern="[A-Za-z0-9]+@+[A-Za-z]+[.]+[A-Za-z]{2,3}$"
            #m="ngModel" required >
   </div>
   <div class="alert alert-danger" *ngIf="m.touched && m.invalid">
-    Email is required
+    Erreur Email
   </div>
   <div class="form-group">
     <label>Phone Number</label>
@@ -51,4 +52,4 @@
     </button>
   </div>
 </form>
-
+</div>

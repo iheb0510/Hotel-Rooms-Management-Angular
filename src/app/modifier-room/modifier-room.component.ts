@@ -37,4 +37,7 @@ export class ModifierRoomComponent implements OnInit {
     });
   }
 
+  can() {
+    this.router.navigate(['/Room/list']);
+  }
 }

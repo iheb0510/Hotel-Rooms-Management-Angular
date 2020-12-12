@@ -19,9 +19,9 @@ export class AjouterRoomComponent implements OnInit {
 
   ngOnInit(): void {
     this.RoomForm = new FormGroup({
-        RoomNumber: new FormControl(''),
-        TypeOfRoom: new FormControl(''),
-        SquareFootage: new FormControl(''),
+        RoomNumber: new FormControl('', [Validators.required, Validators.maxLength(4)]),
+        TypeOfRoom: new FormControl('', [Validators.required]),
+        SquareFootage: new FormControl('', [Validators.required]),
         PhoneAvailable: new FormControl('', [Validators.required, Validators.pattern('[0-9]{8}$')])
 
       }
@@ -60,4 +60,7 @@ export class AjouterRoomComponent implements OnInit {
 
   }
 
+  can() {
+    this.r.navigate(['/Room/list']);
+  }
 }
