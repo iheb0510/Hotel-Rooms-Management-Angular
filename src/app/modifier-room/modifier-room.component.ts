@@ -30,7 +30,7 @@ export class ModifierRoomComponent implements OnInit {
   sum(e): void {
     this.R2 = e;
     this.R2.id = this.Room.id;
-    this.R2.Tourist = this.Room.Tourist;
+    this.R2.Tourist = [];
     this.Serv.UpdateRoom(this.R2).subscribe((response) => {
       console.log('Room updated!');
       this.router.navigate(['/Room/list']);

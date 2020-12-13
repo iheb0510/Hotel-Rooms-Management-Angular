@@ -6,15 +6,7 @@
       "SquareFootage": 2222,
       "PhoneAvailable": 54424445,
       "id": 1,
-      "Tourist": [
-        {
-          "cin": "02589634",
-          "nom": "aaa",
-          "prenom": "bbbb",
-          "Email": "laribi@gmail.com",
-          "tel": "54424443"
-        }
-      ]
+      "Tourist": []
     },
     {
       "RoomNumber": "655",

@@ -40,7 +40,7 @@
 
   </div>
   <div class="text-center">
-   <button [disabled]="RoomForm.invalid"  class="btn btn-success btn-lg" type="submit" (click)="Ajouter()">Add Room</button>
+   <button [disabled]="RoomForm.invalid && RoomForm.untouched"  class="btn btn-success btn-lg" type="submit" (click)="Ajouter()">Add Room</button>
     <button class="btn btn-primary btn-lg" (click)="can()"  >
       Cancel
     </button>
